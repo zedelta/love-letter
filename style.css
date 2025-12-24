@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Scenes */
+.scene {
+    display: none;
+    height: 100vh;
+    padding: 50px;
+}
+
+.scene.active {
+    display: block;
+}
+
+/* Love letter */
+h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    font-size: 1.3em;
+    color: #fff;
+    max-width: 600px;
+    margin: auto;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1e50;
+}
+
+/* Flower */
+.flower {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 100px auto 20px;
+    animation: bloom 2s ease-out forwards;
+}
+
+.petal {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background: pink;
+    border-radius: 50%;
+    top: 25px;
+    left: 45px;
+    transform-origin: bottom center;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg); }
+.petal:nth-child(2) { transform: rotate(90deg); }
+.petal:nth-child(3) { transform: rotate(180deg); }
+.petal:nth-child(4) { transform: rotate(270deg); }
+
+@keyframes bloom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Kisses text */
+h2 {
+    color: white;
+    font-size: 2em;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
